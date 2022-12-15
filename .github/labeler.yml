@@ -1,0 +1,5 @@
+text:
+  - content/*.md
+
+code:
+  - src/**/*.{js,ts,tsx,html,css}
