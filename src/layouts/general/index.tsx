@@ -9,11 +9,11 @@ const title = 'Variant Handbok';
 
 export default function GeneralLayout({
   frontmatter,
-  toc,
+  // toc,
   noSidebar = false,
   children,
 }: LayoutProps) {
-  const subHeadings = toc[0]?.children.map((c) => c.value) ?? [];
+  // const subHeadings = toc[0]?.children.map((c) => c.value) ?? [];
   const classes = and(style.main, !noSidebar ? style.main__sidebar : undefined);
 
   return (
