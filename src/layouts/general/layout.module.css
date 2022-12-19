@@ -18,7 +18,7 @@
   bottom: 0;
   content: '';
   display: block;
-  background: var(--color-secondary1__shade3);
+  background: var(--color-secondary1__shade2);
   z-index: -1;
   opacity: var(--bg-opacity);
   transition: opacity 100ms ease-in;

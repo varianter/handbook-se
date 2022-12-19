@@ -15,12 +15,19 @@ export default function GeneralLayout({
   children,
 }: LayoutProps) {
   const [val, ref] = usePercentageInView<HTMLDivElement>();
+  const size = Math.max(1 - val / 2, 0.5) * 100;
 
   // const subHeadings = toc[0]?.children.map((c) => c.value) ?? [];
   const classes = and(style.main, !noSidebar ? style.main__sidebar : undefined);
 
   return (
-    <div className={classes} style={{ ['--bg-opacity' as any]: 1 - val }}>
+    <div
+      className={classes}
+      style={{
+        ['--bg-opacity' as any]: 1 - val,
+        ['--size' as any]: size,
+      }}
+    >
       <Head>
         <title>{frontmatter?.title ?? title}</title>
         <link rel="icon" href={favicon} />

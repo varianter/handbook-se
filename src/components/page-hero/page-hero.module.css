@@ -8,13 +8,18 @@
 }
 
 .header__logo {
-  margin-left: auto;
   display: block;
   padding: 1rem;
+  position: fixed;
+  right: 0;
+  mix-blend-mode: difference;
 }
 
 .header__logo img {
   display: block;
+  scale: calc(var(--size) * 1%);
+  transform-origin: right top;
+  transition: all 200ms linear;
 }
 
 .header__tag {
