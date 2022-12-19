@@ -189,3 +189,20 @@ h4 .markdownIt-Anchor {
   background-color: var(--color-secondary3__tint1);
   color: var(--color-secondary3__tint1--text);
 }
+
+.background-color-secondary4__tint2 {
+  background-color: var(--color-primary__shade4);
+  padding: 2rem;
+  margin: -2rem;
+}
+
+.backgroundExample {
+  margin-top: 15rem;
+}
+
+.backgroundBenefits {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
