@@ -187,7 +187,7 @@ h4 .markdownIt-Anchor {
 }
 
 .backgroundExample {
-  margin-top: 15rem;
+  clear: both;
 }
 
 .backgroundBenefits {
