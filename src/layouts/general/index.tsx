@@ -37,10 +37,10 @@ export default function GeneralLayout({
         <meta name="twitter:site" content="@variant_as" />
         <meta property="og:title" content={frontmatter?.title ?? title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://handbook.variant.no/" />
+        <meta property="og:url" content="https://handbook.variant.se/" />
         <meta
           property="og:image"
-          content="https://www.variant.no/og-header-min.png"
+          content="https://www.variant.se/og-header-min.png"
         />
       </Head>
 
