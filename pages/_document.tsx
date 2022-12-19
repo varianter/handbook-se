@@ -19,7 +19,7 @@ _paq.push(["enableLinkTracking"]);
 (function() {
   var u = "https://variant.innocraft.cloud/";
   _paq.push(["setTrackerUrl", u + "piwik.php"]);
-  _paq.push(["setSiteId", "2"]);
+  _paq.push(["setSiteId", "6"]);
   var d = document,
     g = d.createElement("script"),
     s = d.getElementsByTagName("script")[0];
