@@ -3,8 +3,8 @@ import style from './book.module.css';
 type BookProps = React.PropsWithChildren<{
   filename: string;
 }>;
-const Book = ({ children, filename }: BookProps) => {
-  const editUrl = `https://github.com/varianter/handbook-se/blob/master/content/${filename}`;
+const Book = ({ children }: BookProps) => {
+  const editUrl = `https://github.com/varianter/handbook-se/`;
   return (
     <section>
       <article className="handbook">{children}</article>

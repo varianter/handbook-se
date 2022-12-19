@@ -77,6 +77,7 @@ li + li {
 .illustration {
   width: 15rem;
   margin: 5rem 2rem 2rem;
+  shape-outside: circle(55%);
 }
 .illustration--right {
   float: right;
@@ -101,20 +102,9 @@ li + li {
 
 .handbook > h1:first-child {
   margin: 4rem 0;
-  background: linear-gradient(
-    to right,
-    var(--color-primary),
-    var(--color-secondary1),
-    var(--color-secondary2)
-  );
-  background-size: 100% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
-  color: transparent;
-
   word-wrap: break-word;
   overflow-wrap: break-word;
+  mix-blend-mode: difference;
 }
 
 code {
