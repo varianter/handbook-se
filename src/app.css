@@ -24,12 +24,12 @@ body,
 html {
   --font-size-min: 14;
   --font-size-max: 18;
-  background: var(--color-secondary1__shade3);
+  background: var(--color-secondary1__shade4);
   scroll-behavior: smooth;
-  color: var(--color-secondary1__shade3--text);
+  color: var(--color-secondary1__shade4--text);
 }
 body {
-  color: var(--color-secondary1__shade3--text);
+  color: var(--color-secondary1__shade4--text);
 }
 h1,
 h2,

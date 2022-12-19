@@ -10,6 +10,19 @@
   background: url('/assets/blob1.svg') left top no-repeat,
     url('/assets/blob2.svg') right 40vh no-repeat;
 }
+.main::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  background: var(--color-secondary1__shade3);
+  z-index: -1;
+  opacity: var(--bg-opacity);
+  transition: opacity 100ms ease-in;
+}
 
 .content {
   max-width: 45rem;
