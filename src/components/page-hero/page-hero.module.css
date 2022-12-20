@@ -19,7 +19,7 @@
   display: block;
   scale: calc(var(--size) * 1%);
   transform-origin: right top;
-  transition: all 200ms linear;
+  transition: all 100ms ease-out;
 }
 
 .header__tag {
