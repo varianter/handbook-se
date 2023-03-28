@@ -4,23 +4,23 @@ export const Values = () => {
   return (
     <div className={style.values}>
       <BlobBackgroundText
-        headingText={'Åpenhet'}
+        headingText={'Transparens'}
         text={
-          'Hva i all verden skal et selskap tjene på å holde informasjon hemmelig for sine ansatte?'
+          'Vad i hela friden har  företag att vinna på att hålla information hemlig för sina anställda?'
         }
         blobNr={1}
       />
       <BlobBackgroundText
-        headingText={'Læreglede'}
+        headingText={'Glädje att lära'}
         text={
-          'Vi ønsker å lære og lære bort. Vi skal ha ydmykhet nok til å skjønne at vi kan lære noe fra alle, og troen på at alle kan lære noe fra oss.'
+          'Vi vill lära och undervisa. Vi måste ha tillräckligt med ödmjukhet för att inse att vi kan lära oss något av alla, och tron på att alla kan lära oss något av oss.'
         }
         blobNr={2}
       />
       <BlobBackgroundText
-        headingText={'Raushet'}
+        headingText={'Generositet'}
         text={
-          'Dette vises i hvordan vi møter hverandre, våre kunder og folk i nærmiljøet.'
+          'Det visar sig i hur vi möter varandra, våra kunder och människor i vår närhet.'
         }
         blobNr={3}
       />

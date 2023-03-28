@@ -12,9 +12,9 @@ export default function PageHero({}: PageHeroProps) {
       </Link>
 
       <ul className={style.header__tag}>
-        <li>Raus</li>
-        <li>Modig</li>
-        <li>Læreglad</li>
+        <li>Generös</li>
+        <li>Transparent</li>
+        <li>Gläda att lära</li>
       </ul>
     </header>
   );
