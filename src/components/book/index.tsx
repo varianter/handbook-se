@@ -11,8 +11,10 @@ const Book = ({ children }: BookProps) => {
 
       <footer className={style.footer}>
         <p>
-          Ser du en feil eller noe som ikke kommer klart nok frem?{' '}
-          <a href={editUrl}>Send beskjed eller foreslå en endring! 🥰</a>
+          Ser du ett fel eller något som upplevs som otydligt?{' '}
+          <a href={editUrl}>
+            Skicka ett meddelande eller föreslå en ändring! 🥰
+          </a>
         </p>
       </footer>
     </section>

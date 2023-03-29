@@ -87,18 +87,6 @@ export default function GeneralLayout({
             </li>
             <li>
               <a
-                href="https://twitter.com/variant_as"
-                title="Variant på Twitter"
-                rel="external"
-              >
-                <img
-                  src={require('./logos/twitter.svg')}
-                  alt="Variant på Twitter"
-                />
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://github.com/varianter"
                 title="Variant på Github"
                 rel="external"
@@ -111,7 +99,7 @@ export default function GeneralLayout({
             </li>
             <li>
               <a
-                href="https://instagram.com/variant_as"
+                href="https://www.instagram.com/variant_swe/"
                 title="Variant på Instagram"
                 rel="external"
               >
@@ -123,19 +111,7 @@ export default function GeneralLayout({
             </li>
             <li>
               <a
-                href="https://fb.me/varianter"
-                title="Variant på Facebook"
-                rel="external"
-              >
-                <img
-                  src={require('./logos/facebook.svg')}
-                  alt="Variant på Facebook"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/variant-as/"
+                href="https://www.linkedin.com/company/variant-sverige/"
                 title="Variant på LinkedIn"
                 rel="external"
               >
