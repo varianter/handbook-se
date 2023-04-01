@@ -13,7 +13,7 @@ export const Values = () => {
       <BlobBackgroundText
         headingText={'Glädje att lära'}
         text={
-          'Vi vill lära och undervisa. Vi måste ha tillräckligt med ödmjukhet för att inse att vi kan lära oss något av alla, och tron på att alla kan lära oss något av oss.'
+          'Vi vill lära och undervisa. Vi måste ha tillräckligt med ödmjukhet för att inse att vi kan lära oss något av alla, och tron på att alla kan lära oss något.'
         }
         blobNr={2}
       />
