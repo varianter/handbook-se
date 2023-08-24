@@ -11,7 +11,7 @@ export const Values = () => {
         blobNr={1}
       />
       <BlobBackgroundText
-        headingText={'Glädje att lära'}
+        headingText={'Lärglädje'}
         text={
           'Vi vill lära och undervisa. Vi måste ha tillräckligt med ödmjukhet för att inse att vi kan lära oss något av alla, och tron på att alla kan lära oss något.'
         }
