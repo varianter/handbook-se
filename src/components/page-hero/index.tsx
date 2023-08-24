@@ -14,7 +14,7 @@ export default function PageHero({}: PageHeroProps) {
       <ul className={style.header__tag}>
         <li>Generös</li>
         <li>Transparent</li>
-        <li>Glädje att lära</li>
+        <li>Lärglädje</li>
       </ul>
     </header>
   );
