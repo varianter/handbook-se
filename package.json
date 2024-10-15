@@ -30,7 +30,7 @@
     "@variant/profile": "^3.0.1",
     "gray-matter": "^4.0.3",
     "hamburger-react": "^2.5.0",
-    "next": "^13.0.7",
+    "next": "^14.2.10",
     "next-images": "^1.8.4",
     "qs": "^6.11.0",
     "react": "18.2.0",
