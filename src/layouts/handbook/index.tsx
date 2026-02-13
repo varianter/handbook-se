@@ -21,7 +21,6 @@ function createLinkable(el: 'h2' | 'h3' | 'h4') {
       },
       childList.concat(
         <a className={style.anchor} key="link" href={`#${slug}`}>
-          #
         </a>,
       ),
     );

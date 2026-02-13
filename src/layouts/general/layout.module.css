@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
 
-  background: url('/assets/blob1.svg') left top no-repeat,
-    url('/assets/blob2.svg') right 40vh no-repeat;
+  background: url('/assets/blob1.svg') left top 40vh no-repeat,
+    url('/assets/blob2.svg') right top no-repeat;
 }
 .main::before {
   position: absolute;
@@ -18,7 +18,6 @@
   bottom: 0;
   content: '';
   display: block;
-  background: var(--color-secondary1__shade2);
   z-index: -1;
   opacity: var(--bg-opacity);
   transition: opacity 100ms ease-in;
@@ -141,7 +140,6 @@
 }
 
 .footer {
-  background: url('./footer.svg') no-repeat center top;
   margin-top: auto;
 }
 .footer__inner {
