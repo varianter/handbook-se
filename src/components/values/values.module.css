@@ -2,14 +2,25 @@
   display: flex;
   padding-block: 5rem;
   justify-content: space-around;
-  gap: 3rem;
-  align-items: stretch;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
 .values > * {
   flex: 1;
   min-height: 300px;
-  max-width: 450px;
+}
+
+.values > *:nth-child(1) {
+  flex: 1.5;
+}
+
+.values > *:nth-child(2) {
+  flex: 2;
+}
+
+.values > *:nth-child(3) {
+  flex: 1.5;
 }
 
 @media (max-width: 500px) {

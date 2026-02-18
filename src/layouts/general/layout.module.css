@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    background: none;
+  }
+  
   .nav {
     width: 100%;
   }
@@ -147,7 +151,7 @@
   z-index: 2;
   max-width: 45rem;
   margin: 0 auto;
-  min-height: 20rem;
+  min-height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +170,7 @@
 .footer__social a {
   margin: 0;
   display: block;
-  padding: 1rem 0.3rem;
+  padding: 1rem 0.6rem;
 }
 .footer__social img {
   display: block;

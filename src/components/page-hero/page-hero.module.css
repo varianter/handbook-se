@@ -29,3 +29,13 @@
 
   list-style: none;
 }
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .header__logo img {
+    width: 150px;
+    height: auto;
+  }
+}
