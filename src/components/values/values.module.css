@@ -1,6 +1,8 @@
 .values {
   display: flex;
-  padding-block: 5rem;
+  padding-block: 4rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
   justify-content: space-around;
   gap: 2rem;
   align-items: flex-start;

@@ -1,0 +1,65 @@
+.labeledCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.label {
+  background-color: var(--Violet-700);
+  border: 3px solid var(--Violet-700);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 37px;
+}
+
+.labelText {
+  font-family: 'Britti Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: white;
+  padding: 0 19px;
+}
+
+.content {
+  background-color: white;
+  border: 3px solid var(--Violet-700);
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  padding: 3px;
+}
+
+.textContent {
+  background-color: white;
+  border-radius: 20px;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  font-family: 'Britti Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--Dark-600);
+  white-space: pre-wrap;
+}
+
+.textContent p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .textContent {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 16px;
+  }
+  
+  .labelText {
+    font-size: 14px;
+  }
+}
