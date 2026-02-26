@@ -178,6 +178,27 @@ li + li {
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
 }
+.backgroundHighlightFullWidth {
+  background-color: var(--Green-50);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+}
+.labelBorder {
+  padding: 2rem;
+  border: 3px solid var(--Violet-700);
+  border-radius: 1rem 1rem 0 0;
+}
+.label {
+  background-color: var(--Violet-700);
+  border: 3px solid var(--Violet-700);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 37px;
+}
 
 .backgroundExample {
   margin-top: 3rem;
