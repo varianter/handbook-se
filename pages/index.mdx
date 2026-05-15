@@ -8,6 +8,9 @@ import {
 } from 'src/components/illustrationList';
 import { Values } from 'src/components/values/';
 import { LabeledCard } from 'src/components/labeledCard';
+import HandbookLayout from 'src/layouts/handbook';
+
+export default (props) => <HandbookLayout frontmatter={frontmatter} toc={toc} {...props} />;
 
 <img
   src="./assets/illustrations/values.svg"

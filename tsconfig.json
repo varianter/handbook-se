@@ -23,6 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "6.0",
     "skipLibCheck": true,
     "noImplicitAny": true,
     "module": "esnext",
