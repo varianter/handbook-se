@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '../general';
 import Book from 'src/components/book';
 import { MDXProvider } from '@mdx-js/react';
+
+const Provider = MDXProvider as React.FC<React.ComponentProps<typeof MDXProvider>>;
 import slugify from 'slugify';
 import { LayoutProps } from '../signature';
 
@@ -38,11 +40,11 @@ const components = {
 
 export default function HandbookLayout({ children, ...props }: LayoutProps) {
   return (
-    <MDXProvider components={components}>
+    <Provider components={components}>
       <Layout {...props}>
         <Book filename="">{children}</Book>
       </Layout>
-    </MDXProvider>
+    </Provider>
   );
 }
 
