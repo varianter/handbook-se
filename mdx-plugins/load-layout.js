@@ -37,11 +37,9 @@ module.exports = async function (src) {
   const code =
     src +
     `
-import Layout, { getServerSideProps } from 'src/layouts/${layout}';
+import Layout from 'src/layouts/${layout}';
 
 export default (props) => <Layout frontmatter={frontmatter} toc={toc} {...props} />;
-
-export { getServerSideProps };
 `;
 
   return callback(null, code);

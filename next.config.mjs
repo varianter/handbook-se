@@ -1,5 +1,3 @@
-import withImages from 'next-images';
-
 import { plugins as remarkPlugins } from './mdx-plugins/index.mjs';
 
 const withMDX = mdx({
@@ -10,12 +8,8 @@ const withMDX = mdx({
   },
 });
 
-export default withImages(
-  withMDX({
+export default withMDX({
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    images: {
-      disableStaticImages: true,
-    },
 
     webpack: (config) => {
       const oneOf = config.module.rules.find(
@@ -47,8 +41,7 @@ export default withImages(
 
       return config;
     },
-  }),
-);
+});
 
 function regexEqual(x, y) {
   return (

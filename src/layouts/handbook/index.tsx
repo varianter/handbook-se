@@ -8,7 +8,7 @@ import { LayoutProps } from '../signature';
 import style from './handbook.module.css';
 
 function createLinkable(el: 'h2' | 'h3' | 'h4') {
-  return ({ children, ...props }: JSX.IntrinsicElements[typeof el]) => {
+  return ({ children, ...props }: React.JSX.IntrinsicElements[typeof el]) => {
     const textContent = getNodeText(children);
     const slug = slugify(textContent, { lower: false });
     const childList = React.Children.toArray(children);
@@ -50,10 +50,11 @@ function getNodeText(node: React.ReactNode): string {
   if (typeof node == 'string') return node;
   if (typeof node == 'number') return String(node);
   if (typeof node == 'boolean') return '';
+  if (typeof node == 'bigint') return String(node);
   if (node == null) return '';
   if (Array.isArray(node)) return node.map(getNodeText).join('');
-  if ('props' in node) {
-    return getNodeText(node.props.children);
+  if (React.isValidElement(node)) {
+    return getNodeText((node.props as { children?: React.ReactNode }).children);
   }
   return '';
 }
