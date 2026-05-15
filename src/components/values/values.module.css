@@ -25,13 +25,13 @@
   flex: 1.5;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .values {
     flex-direction: column;
     align-items: center;
     gap: 5rem;
   }
-  
+
   .values > * {
     max-width: 100%;
     width: 100%;

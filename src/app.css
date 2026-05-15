@@ -204,6 +204,12 @@ li + li {
   margin-top: 3rem;
 }
 
+.textBackgroundWhite h1,
+.textBackgroundWhite p {
+  background-color: color-mix(in srgb, var(--Light-100) 90%, transparent);
+  border-radius: 0.5rem;
+}
+
 .listGap {
   display: flex;
   flex-direction: column;
@@ -277,7 +283,7 @@ a:hover {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   .illustration--left,
   .illustration--right {
     max-width: 60%;
