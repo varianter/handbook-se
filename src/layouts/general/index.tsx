@@ -75,7 +75,7 @@ export default function GeneralLayout({
           <ul className={style.footer__social}>
             <li>
               <a
-                href="https://blog.variant.no"
+                href="https://medium.com/variant-swe"
                 title="Variant Blogg"
                 rel="external"
               >
