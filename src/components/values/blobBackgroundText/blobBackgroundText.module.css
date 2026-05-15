@@ -1,23 +1,116 @@
 .blobBackgroundText {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 62px 45px 54px;
+  width: 100%;
+  height: 200%;
 }
 
 .blobBackgroundText h4 {
-  font-size: 2.25rem;
-  font-family: 'Recoleta', serif;
-  font-weight: 400;
+  font-size: 32px;
+  font-family: 'Britti Sans', sans-serif;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0;
 }
 
-.blobBackgroundText__blob {
+.blobBackgroundText p {
+  font-family: 'Britti Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.emoji {
   position: absolute;
-  z-index: -1;
-  left: -3rem;
-  max-width: 40vw;
+  width: 17.775px;
+  height: 22.146px;
+  top: 42px;
+  right: 45px;
+}
+
+/* Variant 1: Transparens - Blue background with white text */
+.variant1 {
+  background-color: #3840ff;
+  color: white;
+  border-radius: 20px 120px 20px 20px;
+  padding-top: 90px;
+  padding-bottom: 3rem;
+}
+
+.variant1 h4,
+.variant1 p {
+  color: white;
+}
+
+.variant1 p {
+  font-weight: 540;
+}
+
+/* Variant 2: Lärglädje - Purple border, white background */
+.variant2 {
+  border: 1px solid #7022d6;
+  color: #222424;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 120px 120px 20px 20px;
+}
+
+.variant2 h4,
+.variant2 p {
+  color: #222424;
+}
+
+.variant2 p {
+  font-weight: 300;
+}
+
+/* Variant 3: Generositet - Light blue background */
+.variant3 {
+  background-color: var(--Blue-50);
+  color: #222424;
+  border-radius: 120px 20px 20px 20px;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.variant3 h4,
+.variant3 p {
+  color: #222424;
+}
+
+.variant3 p {
+  font-weight: 300;
+}
+
+.variant3 .emoji {
+  width: 49.226px;
+  height: 49.226px;
+  top: 31px;
+  right: 45px;
 }
 
 @media (max-width: 500px) {
   .blobBackgroundText {
     text-align: center;
-    max-width: 50vw;
+    max-width: 100%;
+    padding: 48px 30px;
+  }
+  
+  .emoji {
+    width: 15px;
+    height: 18px;
+    top: 60px;
+    right: 60px;
+  }
+  
+  .variant3 .emoji {
+    width: 40px;
+    height: 40px;
+    top: 25px;
+    right: 30px;
   }
 }

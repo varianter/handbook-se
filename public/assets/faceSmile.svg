@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 38.1928 39.7819" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Face Smile">
+<path id="smile_small" d="M1.27332 6.68193C8.91633 20.8761 29.2764 20.8761 36.9194 6.68193" stroke="var(--stroke-0, #222424)" stroke-width="2.54615" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="nose" d="M18.6721 1.27308V6.52961H20.8386" stroke="var(--stroke-0, #222424)" stroke-width="2.54615" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="eye_r" d="M24.5121 1.27308V3.90134" stroke="var(--stroke-0, #222424)" stroke-width="2.54615" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="eye_l" d="M12.8313 1.27308V3.90134" stroke="var(--stroke-0, #222424)" stroke-width="2.54615" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

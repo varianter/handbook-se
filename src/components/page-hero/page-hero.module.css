@@ -1,5 +1,4 @@
 .header {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,14 +10,13 @@
   display: block;
   padding: 1rem;
   position: fixed;
-  right: 0;
-  mix-blend-mode: difference;
+  left: 0;
 }
 
 .header__logo img {
   display: block;
   scale: calc(var(--size) * 1%);
-  transform-origin: right top;
+  transform-origin: left top;
   transition: all 100ms ease-out;
 }
 
@@ -26,8 +24,18 @@
   margin-top: auto;
   font-size: 3rem;
   font-weight: normal;
-  font-family: 'Recoleta', serif;
+  font-family: 'Britti Sans';
   padding: 2rem 0;
 
   list-style: none;
+}
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .header__logo img {
+    width: 150px;
+    height: auto;
+  }
 }
