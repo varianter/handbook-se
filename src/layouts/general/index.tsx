@@ -1,4 +1,3 @@
-import favicon from '@variant/profile/lib/logo/favicon.png';
 import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import PageHero from 'src/components/page-hero';
@@ -30,7 +29,7 @@ export default function GeneralLayout({
     >
       <Head>
         <title>{frontmatter?.title ?? title}</title>
-        <link rel="icon" href={favicon} />
+        <link rel="icon" href="/logo-192.png" />
         <link rel="manifest" href="/manifest.json" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -80,7 +79,7 @@ export default function GeneralLayout({
                 rel="external"
               >
                 <img
-                  src={require('./logos/medium.svg')}
+                  src="/medium.svg"
                   alt="Variant på Medium.com"
                 />
               </a>
@@ -92,7 +91,7 @@ export default function GeneralLayout({
                 rel="external"
               >
                 <img
-                  src={require('./logos/github.svg')}
+                  src="/github.svg"
                   alt="Variant på Github"
                 />
               </a>
@@ -104,7 +103,7 @@ export default function GeneralLayout({
                 rel="external"
               >
                 <img
-                  src={require('./logos/instagram.svg')}
+                  src="/instagram.svg"
                   alt="Variant på Instagram"
                 />
               </a>
@@ -116,7 +115,7 @@ export default function GeneralLayout({
                 rel="external"
               >
                 <img
-                  src={require('./logos/linkedin.svg')}
+                  src="/linkedin.svg"
                   alt="Variant på LinkedIn"
                 />
               </a>
@@ -130,7 +129,7 @@ export default function GeneralLayout({
 
 function usePercentageInView<T extends HTMLElement>(): [
   number,
-  React.RefObject<T>,
+  React.RefObject<T | null>,
 ] {
   const [value, setValue] = useState<number>(1);
   const ref = useRef<T>(null);
@@ -155,7 +154,7 @@ function usePercentageInView<T extends HTMLElement>(): [
     window.addEventListener('scroll', percentageSeen, {
       passive: true,
     });
-    return () => window.addEventListener('scroll', percentageSeen);
+    return () => window.removeEventListener('scroll', percentageSeen);
   }, [ref]);
 
   return [value, ref];

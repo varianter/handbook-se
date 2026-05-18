@@ -1,9 +1,10 @@
+import { type ComponentPropsWithoutRef } from 'react';
 import { and } from 'src/utils/css';
 import style from './button.module.css';
 
 export type ButtonProps = {
   mode?: 'primary' | 'secondary';
-} & JSX.IntrinsicElements['button'];
+} & ComponentPropsWithoutRef<'button'>;
 export default function Button({
   children,
   mode = 'primary',

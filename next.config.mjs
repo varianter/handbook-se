@@ -1,54 +1,47 @@
-import withImages from 'next-images';
-
 import { plugins as remarkPlugins } from './mdx-plugins/index.mjs';
+import createMDX from '@next/mdx';
 
-const withMDX = mdx({
+const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    providerImportSource: '@mdx-js/react',
     remarkPlugins,
   },
 });
 
-export default withImages(
-  withMDX({
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    images: {
-      disableStaticImages: true,
-    },
+export default withMDX({
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 
-    webpack: (config) => {
-      const oneOf = config.module.rules.find(
-        (rule) => typeof rule.oneOf === 'object',
+  webpack: (config) => {
+    const oneOf = config.module.rules.find(
+      (rule) => typeof rule.oneOf === 'object',
+    );
+    if (oneOf) {
+      const moduleCssRule = oneOf.oneOf.find((rule) =>
+        regexEqual(rule.test, /\.module\.css$/),
       );
-      if (oneOf) {
-        const moduleCssRule = oneOf.oneOf.find((rule) =>
-          regexEqual(rule.test, /\.module\.css$/),
+      if (moduleCssRule) {
+        const cssLoader = moduleCssRule.use.find(({ loader }) =>
+          loader.includes('css-loader'),
         );
-        if (moduleCssRule) {
-          const cssLoader = moduleCssRule.use.find(({ loader }) =>
-            loader.includes('css-loader'),
-          );
-          if (cssLoader) {
-            cssLoader.options.modules.mode = 'local';
-          }
+        if (cssLoader) {
+          cssLoader.options.modules.mode = 'local';
         }
       }
+    }
 
-      config.module.rules.push({
-        test: /\.(woff(2)?|ttf|eot)/,
-        type: 'asset/resource',
-        generator: {
-          publicPath:
-            process.env.NODE_ENV === 'development' ? '_next/' : '../../',
-          filename: 'static/fonts/[name].[contenthash][ext]',
-        },
-      });
+    config.module.rules.push({
+      test: /\.(woff(2)?|ttf|eot)/,
+      type: 'asset/resource',
+      generator: {
+        publicPath:
+          process.env.NODE_ENV === 'development' ? '_next/' : '../../',
+        filename: 'static/fonts/[name].[contenthash][ext]',
+      },
+    });
 
-      return config;
-    },
-  }),
-);
+    return config;
+  },
+});
 
 function regexEqual(x, y) {
   return (
@@ -59,32 +52,4 @@ function regexEqual(x, y) {
     x.ignoreCase === y.ignoreCase &&
     x.multiline === y.multiline
   );
-}
-
-function mdx(pluginOptions = {}) {
-  return (nextConfig = {}) => {
-    const extension = pluginOptions.extension || /\.mdx$/;
-
-    return Object.assign({}, nextConfig, {
-      webpack(config, options) {
-        config.module.rules.push({
-          test: extension,
-          use: [
-            options.defaultLoaders.babel,
-            {
-              loader: '@mdx-js/loader',
-              options: pluginOptions.options,
-            },
-            './mdx-plugins/load-layout.js',
-          ],
-        });
-
-        if (typeof nextConfig.webpack === 'function') {
-          return nextConfig.webpack(config, options);
-        }
-
-        return config;
-      },
-    });
-  };
 }
